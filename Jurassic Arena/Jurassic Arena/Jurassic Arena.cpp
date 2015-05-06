@@ -3,8 +3,44 @@
 using namespace std;
 int main(){
 
+	//Content between dashed lines is an IDEA as to how to select the dinosaurs. It is an extremely rough outline.
+	//----------
+	//dinoID will correlate the number entered to the dinosuar.
+	const int dinoID = 5;
+	int dinoSelection1[dinoID];
+	int dinoSelection2[dinoID];
+
+	cout << "Player 1 select your dinosaurs." << endl;
+	cout << "1. ";
+	cin >> dinoSelection1[0];
+	cout << "2. ";
+	cin >> dinoSelection1[1];
+	cout << "3. ";
+	cin >> dinoSelection1[2];
+	cout << "4. ";
+	cin >> dinoSelection1[3];
+	cout << "5. ";
+	cin >> dinoSelection1[4];
+
+	cout << "Player 2 select your dinosaurs." << endl;
+	cout << "1. ";
+	cin >> dinoSelection2[0];
+	cout << "2. ";
+	cin >> dinoSelection2[1];
+	cout << "3. ";
+	cin >> dinoSelection2[2];
+	cout << "4. ";
+	cin >> dinoSelection2[3];
+	cout << "5. ";
+	cin >> dinoSelection2[4];
+	//----------
+
+	cout << "Let the battle begin!" << endl << endl;
 	//func is a TEMPORARY placeholder until dinosaur functions are complete.
 	int func = 1;
+	const int NumOfDino = 5;
+	int Player1[NumOfDino];
+	int Player2[NumOfDino];
 
 	//Gameplay template.
 	cout << "Player 1" << setw(40) << "Player 2" << endl;
@@ -21,10 +57,16 @@ int main(){
 
 	cout << endl;
 
-	//Total healths from each team are summed in these two variables.
-	int allHealth1 = func;
-	int allHealth2 = func;
-
+	//Total healths from the team are summed into the variable allHealth1. 
+	int allHealth1 = 0;
+	for (int i = 0; i < 5; i++){
+		allHealth1 += Player1[i];
+	}
+	//Total healths from the team are summed into the variable allHealth2. 
+	int allHealth2 = 0;
+	for (int i = 0; i < 5; i++){
+		allHealth2 += Player2[i];
+	}
 	//attackValue is a TEMPORARY placeholder until dinosaur functions are complete.
 	int attackValue = 2;
 
